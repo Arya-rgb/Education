@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Education</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="txt_login">Login Dengan Google</string>
+    <string name="txt_apptitle">Aplikasi Edukasi</string>
+    <string name="title_pelajaranku">Pelajaranku</string>
+    <string name="title_profile">Profile</string>
+</resources>

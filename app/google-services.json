@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "876725757114",
+    "project_id": "education-321f3",
+    "storage_bucket": "education-321f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876725757114:android:4380234763d20067ba4e83",
+        "android_client_info": {
+          "package_name": "com.thorin.eduaps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876725757114-jtmjso7pfc3dfvl8tfsqoiht4hn2rn7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFtJIeK-6-6jzeWzvqly98ktrfjzrgm3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876725757114-jtmjso7pfc3dfvl8tfsqoiht4hn2rn7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
