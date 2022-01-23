@@ -1,4 +1,4 @@
-package com.thorin.eduaps
+package com.thorin.eduaps.ui.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,6 +11,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.thorin.eduaps.ui.navigation.MainActivity
+import com.thorin.eduaps.R
 import com.thorin.eduaps.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {

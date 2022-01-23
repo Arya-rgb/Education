@@ -1,13 +1,14 @@
-package com.thorin.eduaps.ui.pelajaranku
+package com.thorin.eduaps.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.thorin.eduaps.data.EducationRepository
 
-class PelajarankuViewModel : ViewModel() {
+class HomeViewModel(private val educationRepository: EducationRepository) : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is Pelajaran Fragment"
+        value = "This is home Fragment"
     }
     val text: LiveData<String> = _text
 }

@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.thorin.eduaps.databinding.FragmentDashboardBinding
+import com.thorin.eduaps.viewmodel.PelajarankuViewModel
 
 class PelajarankuFragment : Fragment() {
 
@@ -31,9 +32,9 @@ class PelajarankuFragment : Fragment() {
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+//        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+//            textView.text = it
+//        })
         return root
     }
 

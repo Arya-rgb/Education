@@ -1,4 +1,4 @@
-package com.thorin.eduaps
+package com.thorin.eduaps.ui.navigation
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.thorin.eduaps.R
 import com.thorin.eduaps.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

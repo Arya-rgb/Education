@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/fragment_dashboard.xml" value="0.18115942028985507" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
