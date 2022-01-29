@@ -1,0 +1,644 @@
+{
+  "bagian_dua_kuisioner": [
+    {
+      "Soal": "1. Kekerasan seksual pada anak adalah kegiatan yang melibatkan anak dalam aktivitas seksual, baik melalui alat kelamin/anus atau bukan, yang melanggar hukum dan norma, dilakukan dengan paksaan, kekerasan atau ancaman",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Benar"
+    },
+    {
+      "Soal": "2. Masalah kekerasan seksual pada anak bukan merupakan kasus yang penting",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "Salah"
+    },
+    {
+      "Soal": "3. Anak-anak beresiko mengalami tindak kekerasan seksual pada usia berapa tahun?",
+      "opsi_1": "A. Anak usia 0-5 tahun",
+      "opsi_2": "B. Anak usia 6-18 tahun",
+      "opsi_3": "C. Anak semua usia",
+      "opsi_4": "",
+      "kunci_jawaban": "C. Anak semua usia"
+    },
+    {
+      "Soal": "4. Siapa yang lebih mungkin melakukan tindak kekerasan seksual pada anak?",
+      "opsi_1": "A. Orang asing, orang yang tidak dikenal orang tua dan anak, orang yang baru dikenal",
+      "opsi_2": "B. Orang yang dikenal anak (ayah kandung/tiri, paman, saudara kandung/tiri, orang yang dipercaya orang tua dan anak, tetangga)",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Orang yang dikenal anak (ayah kandung/tiri, paman, saudara kandung/tiri, orang yang dipercaya orang tua dan anak, tetangga)"
+    },
+    {
+      "Soal": "5. Pelecehan seksual pada anak hanya dilakukan oleh orang dewasa",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "6. Pelaku kekerasan seksual pada anak terbanyak adalah pria",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "7. Melontarkan kata-kata yang tidak senonoh adalah tindakan yang termasuk kedalam kekerasan seksual pada anak",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Benar"
+    },
+    {
+      "Soal": "8. Bentuk tindakan tindakan kekerasan seksual anak adalah berupa perkosaan hubungan kelamin saja",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "9. Dampak kekerasan seksual kepada anak adalah",
+      "opsi_1": "A. Kemungkinan tertular penyakit kelamin, kehamilan",
+      "opsi_2": "B. Menjadi pencuri dan melawan pada orang tua",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Kemungkinan tertular penyakit kelamin, kehamilan"
+    },
+    {
+      "Soal": "10. Seseorang yang pernah melakukan tindak kekerasan seksual pada anak, kemungkinan akan mengulanginya kepada anak tersebut ataupun orang lain",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Benar"
+    },
+    {
+      "Soal": "11. Seseorang yang pernah menjadi korban kekerasan seksual pada masa anak-anak, tidak mungkin nantinya akan menjadi pelaku kekerasan seksual dimasa yang akan datang",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "12. Anak perempuan memiliki resiko lebih besar untuk mengalami tindak kekerasan seksual dibanding anak laki-laki",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Benar"
+    },
+    {
+      "Soal": "13. Pada anak-anak yang mengalami kekerasan seksual kemungknan ditemukan adanya nyeri pada alat kelamin atau anus",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Benar"
+    },
+    {
+      "Soal": "14. Pada anak-anak yang mengalami kekerasan seksual selalu ditemukan adanya luka fisik",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "15. Anak laki-laki lebih aman dari tindakan kekerasan seksual oleh karena itu mereka tidak mungkin menjadi korban kekerasan seksual",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "16. Anak yang mengalami kekerasan seksual (korban)  biasanya akan didatangi kembali oleh pelaku jika korban mengungkapkan kejadian kekerasan seksual tersebut kepada orang tua, guru, orang lain",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "17. Apabila ada anak melaporkan bahwa mereka telah mengalami kejadian kekerasan seksual, seberapa besar laporan mereka dapat dipercaya?",
+      "opsi_1": "A. Tidak dapat dipercaya",
+      "opsi_2": "B. Hampir Selalu dapat dipercaya",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Hampir Selalu dapat dipercaya"
+    },
+    {
+      "Soal": "18. Tayangan di televisi atau media sosial lain yang mengandung unsur pornografi tidak akan memicu terjadinya kekerasan seksual pada anak",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "19. Salah satu tanda dan gejala seorang anak telah mengalami kekerasan seksual adalah anak menjadi sering mengalami mimpi buruk",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Benar"
+    },
+    {
+      "Soal": "20. Anak dengan keterbatasan fisik atau mental (disabilitas) tidak lebih beresiko mengalami tindakan kekerasan seksual daripada anak normal",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "21. Memperlihatkan alat kelamin kepada anak bukan merupakan bentuk kekerasan seksual pada anak",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "22. Kekerasan seksual pada anak dapat terjadi dimana saja, seperti Rumah anak sendiri",
+      "opsi_1": "A. Rumah pelaku",
+      "opsi_2": "B. Sekolah",
+      "opsi_3": "C. Tempat bermain dan berolahraga",
+      "opsi_4": "D. Semua benar",
+      "kunci_jawaban": "D. Semua benar"
+    },
+    {
+      "Soal": "23. Perundang-undangan bukan merupakan bagian penting dari pencegahan dan penanganan kekerasan seksual",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "24. Membangun komunikasi antara orang tua-anak penting dalam membantu melindungi anak dari kekerasan seksual",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Benar"
+    },
+    {
+      "Soal": "25. Pencegahan kekerasan seksual pada anak oleh orang tua dan guru dapat dilakukan dengan cara",
+      "opsi_1": "A. Mengajarkan pada anak untuk tidak memberi tahu orang lain tentang pelecehan terhadap diri mereka sendiri atau anak-anak lain",
+      "opsi_2": "B. Mengizinkan anak beraktivitas di luar rumah dengan nyaman tanpa pengawasan",
+      "opsi_3": "C. Mengajarkan anak tentang bagian privasi (alat kelamin) pada tubuhnya yang tidak boleh sembarangan disentuh orang lain",
+      "opsi_4": "",
+      "kunci_jawaban": "C. Mengajarkan anak tentang bagian privasi (alat kelamin) pada tubuhnya yang tidak boleh sembarangan disentuh orang lain"
+    },
+    {
+      "Soal": "26. Topik terkait seksualitas merupakan topik yang tabu untuk dibicarakan dengan anak",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Benar"
+    },
+    {
+      "Soal": "27. Apabila ada anak menjadi korban kekerasan seksual, maka yang bersalah adalah pelaku?",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "B. Salah"
+    },
+    {
+      "Soal": "28. Apabila ada anak menjadi korban kekerasan seksual, apakah harus dilaporkan?",
+      "opsi_1": "A. Ya ke lembaga polisi atau P2TP2A (Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak)",
+      "opsi_2": "B. Didiamkan saja karena akan menjadi aib bagi keluarga sehingga keluarga dan korban mendapat stigma negative dari masyarakat",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Ya ke lembaga polisi atau P2TP2A (Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak)"
+    },
+    {
+      "Soal": "29. Anak tidak memberi tahu siapa pun tentang kekerasan seksual yang dialaminya karena adanya ancaman dari pelaku, oleh karena itu orang tua atau guru harus membangun komunikasi yang baik dengan anak",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "",
+      "kunci_jawaban": "A. Benar"
+    },
+    {
+      "Soal": "30. Kejahatan seksual belum tentu diawali dengan tindakan kekerasan, pelaku bisa melakukannya dengan merayu atau memberi hadiah",
+      "opsi_1": "A. Benar",
+      "opsi_2": "B. Salah",
+      "opsi_3": "C. Ragu-ragu",
+      "opsi_4": "akhir_soal2",
+      "kunci_jawaban": "A. Benar"
+    },
+    {
+      "Soal": "1. Saya setuju jika orang tua siswa dan guru diberikan penyuluhan materi pencegahan kekerasan seksual pada anak di sekolah",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "2. Saya setuju untuk mengikuti materi tentang pencegahan kekerasan seksual di sekolah",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "3. Menurut saya, pendidikan tentang pencegahan kekerasan seksual pada anak perlu diberikan pada anak sejak usia dini",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "4. Menurut saya, anak tidak perlu diajarkan tentang pencegahan kekerasan seksual, karena belum saatnya anak mendapatkan informasi terkait seksual",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "5. Menurut saya, anak tidak perlu diajarkan tentang pencegahan kekerasan seksual, menunggu mereka dewasa untuk mempelajarinya sendiri",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "6. Menurut saya, topik pencegahan kekerasan seksual merupakan sesuatu yang tabu, sehingga tidak semestinya diberitahukan kepada anak, karena takutnya anak akan mengetahui tentang seksualitas yang tidak pantas bagi anak",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "7. Menurut saya, hanya ibu yang memegang peranan penting dalam melakukan pencegahan kekerasan seksual pada anak",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "8. Menurut saya, guru sekolah merupakan guru pertama bagi anak mereka dalam pendidikan seksualitas",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "9. Saya setuju jika orang tua atau guru harus memberikan pengetahuan dan keterampilan kepada anak untuk mengenali, menghindari, menolak situasi yang berpotensi terjadinya kekerasan seksual secara fisik dan verbal",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "10. Menurut saya, salah satu cara meminimalkan bahaya kekerasan seksual pada anak adalah dengan menyebarkan pesan tentang pencarian bantuan yang tepat jika terjadi atau percobaan kekerasan seksual pada anak",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "11. Menurut saya, tindakan pencegahan tindak kekerasan seksual pada anak dapat dilakukan oleh orang tua dan guru dengan cara membangun hubungan komunikasi yang baik dengan anak",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "12. Menurut saya, jika anak mengalami kekerasan seksual maka anak harus menyembunyikan kejadian kekerasan seksual tersebut kepada orang tua, guru, orang lain",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "13. Menurut saya, orang tua atau guru harus mengajarkan anak tentang bagian privasi pada tubuhnya (alat kelamin, bagian tubuh yang tertutup pakaian dalam) yang tidak boleh disentuh orang lain",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "1. Saya mengajarkan kepada anak tentang daerah pribadi tubuh anak yang harus selalu ditutupi pakaian dan tidak boleh disentuh orang lain, kecuali oleh orang yang dikenal anak",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "B. TIDAK"
+    },
+    {
+      "Soal": "2. Saya mengajarkan kepada anak bahwa hanya anak tersebut yang boleh menyentuh daerah pribadi tubuhnya tersebut dan tidak boleh disentuh orang lain, walaupun oleh yang dikenal anak",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "3. Saya mengajarkan anak bahwa jika ada seseorang yang ingin melihat atau menyentuh daerah pribadi tubuh mereka, maka mereka harus berkata “tidak” atau “berteriak” dan pergi meninggalkan tempat tersebut",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "4. Saya mengajarkan pada anak jika mengalami tindak kekerasan seksual, maka mereka harus berani melaporkannya kepada orang tua, guru, atau orang dewasa yang dipercaya oleh anak",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "5. Saya mengajarkan kepada anak boleh pergi dengan orang yang dikenal ataupun orang tidak dikenal asal tujuannya jelas walau belum minta izin pada orang tua",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "B. TIDAK"
+    },
+    {
+      "Soal": "6. Saya mengajarkan kepada anak untuk mau dipeluk atau dicium oleh siapapun sebagai tanda hormat",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "B. TIDAK"
+    },
+    {
+      "Soal": "7. Saya mengajarkan kepada anak untuk mengunci kamar saat tidur",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "8. Saya mengawasi anak saat bermain, terutama bermain dengan yang berbeda usia dan tidak membiarkan anak-anak bermain di kamar tidur dengan pintu tertutup",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "9. Saya mengajarkan anak boleh menerima hadiah dari siapapun, baik dari orang yang dikenal maupun tidak dikenal sebagai rasa hormat",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "B. TIDAK"
+    },
+    {
+      "Soal": "10. Saya mengajarkan anak jika ada seseorang yang minta diantar ke suatu tempat atau menunjukkan jalan kepada orang tersebut, maka anak harus berani mengatakan “TIDAK” dan menolak pergi dengan orang tersebut",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "11. Saya tidak mengajarkan ataupun menyediakan buku, lagu, atau video yang berisi tentang cara pencegahan kekerasan seksual bagi anak",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "B. TIDAK"
+    },
+    {
+      "Soal": "12. Setiap hari saya selalu mengamati tanda dan gejala kekerasan seksual yang mungkin terdapat pada anak",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "13. Saya mengajarkan anak mengenai sentuhan pada tubuh anak yang boleh dan tidak boleh dilakukan oleh orang lain",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "14. Saya mengajarkan anak untuk tidak pernah membiarkan siapa pun, bahkan keluarga, teman-teman keluarganya untuk datang ke rumah saat anak sendirian di rumah",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "15. Saya mengajarkan anak untuk berjabat tangan dengan orang lain agar mereka merasa lebih aman",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "16. Saya mengajarkan anak tentang rahasia baik (pesta ulang tahun) dan rahasia buruk (jika seseorang menyentuhnya secara tidak tepat dan meminta mereka untuk merahasiakannya)",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "A. YA"
+    },
+    {
+      "Soal": "17. Saya mengajarkan anak boleh mendekati orang asing atau duduk di pangkuan orang dewasa",
+      "opsi_1": "A. YA",
+      "opsi_2": "B. TIDAK",
+      "opsi_3": "",
+      "opsi_4": "",
+      "kunci_jawaban": "B. TIDAK"
+    },
+    {
+      "Soal": "1. Saya menyadari bahwa anak anak usia berapapun berisiko mengalami kekerasan seksual",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "2. Saya harus menjaga anak-anak dari kejahatan seksual",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "3. Saya akan membiarkan anak bepergian/bermain sendirian kemanapun yang anak mau agar anak dapat bersosialisasi",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "4. Saya tidak selalu harus meluangkan waktu untuk ngobrol dan mendengarkan keluhan anak setiap hari",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "5. Saya tidak harus selalu memeriksa kondisi tubuh anak",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "6. Saya menyadari bahwa anak belum perlu mendapatkan informasi terkait seksual sejak usia dini",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "7. Saya menyadari bahwa pencegahan kekerasan seksual pada anak perlu diinformasikan oleh orang tua atau guru kepada anak sejak dini",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "8. Saya percaya bahwa jika anak mendapatkan informasi tentang seksual maka dapat menghindari dari terjadinya kekerasan seksual",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "9. Saya berusaha menghilangkan rasa tabu untuk memberikan informasi seksual serta pencegahan kekerasan seksual pada anak",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "10. Saya harus mendapatkan semua informasi terkait pencegahan kekerasan seksual pada anak",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "11. Saya harus waspada terhadap setiap perubahan perasaan atau perilaku setelah seorang anak kembali dari mengunjungi teman atau anggota keluarga",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "12. Saya tidak harus terlibat dalam kegiatan sekolah dan program dukungan yang mengajarkan keterampilan keselamatan pribadi",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "13. Saya menyadari sadar bahwa adalah guru sekolah adalah merupakan orang pertama bagi anak dalam pendidikan seksualitas",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "14. percaya diri dalam memberikan informasi terkait pencegahan kekerasan seksual kepada anak",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "15. Saya menyadari bahwa pelaku kekerasan seksual lebih banyak dilakukan oleh keluarga atau orang yang dikenal anak daripada dilakukan oleh orang asing",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "16. Saya menyadari bahwa pelaku kekerasan seksual pada anak bisa dilakukan oleh pelaku yang masih berusia anak-anak",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "17. Saya menyadari bahwa anak perlu diajarkan tentang sentuhan boleh dan sentuhan yang tidak boleh pada tubuhnya",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "18. Saya menyadari bahwa harus mengawasi anak saat bermain, terutama bermain dengan yang berbeda usia dan tidak membiarkan anak-anak bermain di kamar tidur dengan pintu tertutup",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "A. Sangat Setuju"
+    },
+    {
+      "Soal": "19. Saya menyadari bahwa dengan rajin melakukan kontrol terhadap pergaulan anak saya akan menyebabkan  anak kurang bersosialisasi",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju"
+    },
+    {
+      "Soal": "20. Saya menyadari bahwa dengan memiliki pengetahuan tentang pencegahan kekerasan seksual dapat membantu mencegah terjadinya kekerasan seksual pada anak",
+      "opsi_1": "A. Sangat Setuju",
+      "opsi_2": "B. Setuju",
+      "opsi_3": "C. Tidak Setuju",
+      "opsi_4": "D. Sangat Tidak Setuju",
+      "kunci_jawaban": "D. Sangat Tidak Setuju akhir_soal"
+    }
+  ]
+}

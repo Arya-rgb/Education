@@ -1,0 +1,68 @@
+{
+  "list_soal": [
+    {
+      "id_soal": "pel1_ppt",
+      "judul_pelajaran": "PPT 1.pptx",
+      "jenis_file": "pdf",
+      "link_file": "www.google.com",
+      "deskripsi_pelajaran": "ppt1 pptx"
+    },
+    {
+      "id_soal": "pel1_video",
+      "judul_pelajaran": "Video 1",
+      "jenis_file": "video",
+      "link_file": "www.google.com",
+      "deskripsi_pelajaran": "video 1 youtube"
+    },
+    {
+      "id_soal": "pel2_ppt",
+      "judul_pelajaran": "PPT 2.pptx",
+      "jenis_file": "pdf",
+      "link_file": "www.google.com",
+      "deskripsi_pelajaran": "ppt2 pptx"
+    },
+    {
+      "id_soal": "pel2_video",
+      "judul_pelajaran": "video 2",
+      "jenis_file": "video",
+      "link_file": "www.google.com",
+      "deskripsi_pelajaran": "video 2 youtube"
+    },
+    {
+      "id_soal": "pel3_ppt",
+      "judul_pelajaran": "PPT 3.pptx",
+      "jenis_file": "pdf",
+      "link_file": "www.google.com",
+      "deskripsi_pelajaran": "ppt3 pptx"
+    },
+    {
+      "id_soal": "pel3_video",
+      "judul_pelajaran": "video 3",
+      "jenis_file": "video",
+      "link_file": "www.google.com",
+      "deskripsi_pelajaran": "video 3 youtube"
+    },
+    {
+      "id_soal": "pel4_ppt",
+      "judul_pelajaran": "PPT 4.pptx",
+      "jenis_file": "pdf",
+      "link_file": "www.google.com",
+      "deskripsi_pelajaran": "ppt4 pptx"
+    },
+    {
+      "id_soal": "pel4_video",
+      "judul_pelajaran": "video 4",
+      "jenis_file": "video",
+      "link_file": "www.google.com",
+      "deskripsi_pelajaran": "video 4 youtube"
+    },
+    {
+      "id_soal": "pel5_video",
+      "judul_pelajaran": "video 5",
+      "jenis_file": "video",
+      "link_file": "www.google.com",
+      "deskripsi_pelajaran": "video 5 youtube"
+    }
+  ]
+}
+

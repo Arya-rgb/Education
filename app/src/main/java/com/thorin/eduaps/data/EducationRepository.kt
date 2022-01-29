@@ -3,6 +3,7 @@ package com.thorin.eduaps.data
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.thorin.eduaps.data.source.remote.RemoteDataSource
+import com.thorin.eduaps.data.source.remote.response.TestQuestioner
 import com.thorin.eduaps.data.source.remote.response.UserResponse
 
 class EducationRepository private constructor(private val remoteDataSource: RemoteDataSource): EducationDataSource {
@@ -13,7 +14,7 @@ class EducationRepository private constructor(private val remoteDataSource: Remo
 
         fun getInstance(remoteDataSource: RemoteDataSource): EducationRepository =
             instance?: synchronized(this) {
-                instance?:EducationRepository(remoteDataSource).apply { instance = this }
+                EducationRepository(remoteDataSource).apply { instance = this }
             }
     }
 
@@ -30,4 +31,29 @@ class EducationRepository private constructor(private val remoteDataSource: Remo
 
     }
 
+    override fun getTest2(): LiveData<List<TestQuestioner>> {
+
+        val dataTest2Result = MutableLiveData<List<TestQuestioner>>()
+        remoteDataSource.getTest2(object : RemoteDataSource.LoadPretest2Callback {
+            override fun onPretest2Received(preTestQuestioner: List<TestQuestioner>) {
+                val dataTest2List = ArrayList<TestQuestioner>()
+                for (response in preTestQuestioner) {
+                    val dataTest2ListAdd = TestQuestioner(
+                        response.Soal,
+                        response.opsi_1,
+                        response.opsi_2,
+                        response.opsi_3,
+                        response.opsi_4,
+                        response.kunci_jawaban
+                    )
+                    dataTest2List.add(dataTest2ListAdd)
+                }
+                dataTest2Result.postValue(dataTest2List)
+            }
+
+        })
+
+        return dataTest2Result
+
+    }
 }

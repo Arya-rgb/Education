@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/id_soal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        tools:text="Apa yang di maksud dengan babi ?" />
+
+    <TextView
+        android:id="@+id/kunci_jawaban"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:visibility="gone"
+        tools:text="Apa yang di maksud dengan babi ?" />
+
+    <RadioGroup
+        android:id="@+id/radioGrupOpsi2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioButton
+            android:id="@+id/opsi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hewan" />
+
+        <RadioButton
+            android:id="@+id/opsi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bukan Hewan" />
+
+        <RadioButton
+            android:id="@+id/opsi3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="entahlah" />
+
+        <RadioButton
+            android:id="@+id/opsi4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:text="Choose 3" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_next_soal2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Next" />
+
+</LinearLayout>

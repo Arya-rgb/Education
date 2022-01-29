@@ -3,7 +3,7 @@
     package="com.thorin.eduaps">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,6 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Education">
+        <activity
+            android:name=".ui.home.test.testresult.DataDemografiResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.test.ActivityListQuest"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.test.testresult.TestResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.test.TestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.test.DataDemografiActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="true"
@@ -23,8 +38,7 @@
         </activity>
         <activity
             android:name=".ui.navigation.MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

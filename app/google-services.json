@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "876725757114",
-    "project_id": "education-321f3",
-    "storage_bucket": "education-321f3.appspot.com"
+    "project_number": "514350554338",
+    "project_id": "education2-e49c7",
+    "storage_bucket": "education2-e49c7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:876725757114:android:4380234763d20067ba4e83",
+        "mobilesdk_app_id": "1:514350554338:android:3fe7c3afc7499ade1d52bb",
         "android_client_info": {
           "package_name": "com.thorin.eduaps"
         }
       },
       "oauth_client": [
         {
-          "client_id": "876725757114-jtmjso7pfc3dfvl8tfsqoiht4hn2rn7h.apps.googleusercontent.com",
+          "client_id": "514350554338-bm21cd9ks2dlovh4fmrv1vvn93kh3oe1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBFtJIeK-6-6jzeWzvqly98ktrfjzrgm3o"
+          "current_key": "AIzaSyDd4OPmODOf1seFLh-zjSf1oOrbv_DiWiI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "876725757114-jtmjso7pfc3dfvl8tfsqoiht4hn2rn7h.apps.googleusercontent.com",
+              "client_id": "514350554338-bm21cd9ks2dlovh4fmrv1vvn93kh3oe1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

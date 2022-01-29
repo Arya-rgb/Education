@@ -14,12 +14,12 @@
     <fragment
         android:id="@+id/navigation_pelajaranku"
         android:name="com.thorin.eduaps.ui.pelajaranku.PelajarankuFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_pelajaranku_appbar"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.thorin.eduaps.ui.profile.ProfileFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_profile_appbar"
         tools:layout="@layout/fragment_profile" />
 </navigation>

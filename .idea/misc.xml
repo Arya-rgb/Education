@@ -3,11 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_data_demografi.xml" value="0.292755787901419" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_data_demografi_result.xml" value="0.33" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_list_quest.xml" value="0.33" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_pretest.xml" value="0.33" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_pretest_page.xml" value="0.1671195652173913" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_test2.xml" value="0.25" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_test2_result.xml" value="0.33" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/alert_info1.xml" value="0.25" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/alert_info2.xml" value="0.25" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/alert_info3.xml" value="0.33" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/alert_info4.xml" value="0.33" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/fragment_dashboard.xml" value="0.18115942028985507" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/item_home.xml" value="0.33" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/list_item.xml" value="0.1621376811594203" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/list_pre_test_items.xml" value="0.33" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/list_test_items.xml" value="0.33" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
       </map>
     </option>

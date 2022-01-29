@@ -1,5 +1,7 @@
 package com.thorin.eduaps.ui.navigation
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -32,5 +34,12 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val prefPreTest2: SharedPreferences =
+            this.getSharedPreferences("prefPreTest2", Context.MODE_PRIVATE)
+        val edit = prefPreTest2.edit()
+        edit.putString("scorePreTest2", "0")
+        edit.apply()
+
     }
 }
