@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:padding="8dp"
     android:orientation="vertical"
-    tools:context=".ui.home.test.TestActivity">
+    tools:context=".ui.home.test.pretest.TestActivity">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_soal"

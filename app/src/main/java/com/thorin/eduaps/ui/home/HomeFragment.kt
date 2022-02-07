@@ -1,5 +1,6 @@
 package com.thorin.eduaps.ui.home
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.thorin.eduaps.databinding.FragmentHomeBinding
-import com.thorin.eduaps.ui.home.test.ActivityListQuest
-import com.thorin.eduaps.ui.home.test.DataDemografiActivity
+import com.thorin.eduaps.ui.home.pelajaran.PelajaranActivity
+import com.thorin.eduaps.ui.home.test.pretest.DataDemografiActivity
+import com.thorin.eduaps.ui.home.test.posttest.PostTestActivity
 import com.thorin.eduaps.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
@@ -33,8 +35,26 @@ class HomeFragment : Fragment() {
 //            textView.text = it
 //        })
 
+
+        val progressdialog = ProgressDialog(activity)
+        progressdialog.setMessage("Memuat Data...")
+
         binding.navPretest.setOnClickListener {
+            progressdialog.show()
             Intent(activity, DataDemografiActivity::class.java).also {
+                startActivity(it)
+                activity?.finish()
+            }
+        }
+
+        binding.navPostTest.setOnClickListener {
+            Intent(activity, PostTestActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        binding.navBelajar.setOnClickListener {
+            Intent(activity, PelajaranActivity::class.java).also {
                 startActivity(it)
             }
         }

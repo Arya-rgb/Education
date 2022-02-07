@@ -12,6 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Education">
         <activity
+            android:name=".ui.detail.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.test.testresult.PostTestResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.test.posttest.PostTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detail.DetailPelajaranVideo"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detail.DetailPelajaranPdf"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.home.pelajaran.PelajaranActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.test.testresult.DataDemografiResultActivity"
             android:exported="false" />
         <activity
@@ -21,10 +42,10 @@
             android:name=".ui.home.test.testresult.TestResultActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.home.test.TestActivity"
+            android:name=".ui.home.test.pretest.TestActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.home.test.DataDemografiActivity"
+            android:name=".ui.home.test.pretest.DataDemografiActivity"
             android:exported="false" />
         <activity
             android:name=".ui.login.LoginActivity"

@@ -5,9 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.thorin.eduaps.data.EducationRepository
 import com.thorin.eduaps.di.Injection
-import com.thorin.eduaps.viewmodel.HomeViewModel
-import com.thorin.eduaps.viewmodel.ProfileViewModel
-import com.thorin.eduaps.viewmodel.Test2ViewModel
+import com.thorin.eduaps.viewmodel.*
 
 class ViewModelFactory private constructor(private val mEducationRepository: EducationRepository): ViewModelProvider.NewInstanceFactory() {
 
@@ -34,6 +32,12 @@ class ViewModelFactory private constructor(private val mEducationRepository: Edu
             }
             modelClass.isAssignableFrom(Test2ViewModel::class.java) -> {
                 Test2ViewModel(mEducationRepository) as T
+            }
+            modelClass.isAssignableFrom(PelajaranViewModel::class.java) -> {
+                PelajaranViewModel(mEducationRepository) as T
+            }
+            modelClass.isAssignableFrom(ChatViewModel::class.java) -> {
+                ChatViewModel(mEducationRepository) as T
             }
             else -> throw Throwable("Unknown ViewModel class : "+modelClass.name)
         }

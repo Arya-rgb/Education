@@ -1,18 +1,22 @@
-package com.thorin.eduaps.ui.home.test
+package com.thorin.eduaps.ui.home.test.pretest
 
 import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.thorin.eduaps.R
 import com.thorin.eduaps.databinding.ActivityDataDemografiBinding
-import com.thorin.eduaps.ui.home.test.testresult.DataDemografiResultActivity
+import com.thorin.eduaps.ui.navigation.MainActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class DataDemografiActivity : AppCompatActivity() {
 
@@ -24,13 +28,22 @@ class DataDemografiActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
         _binding = ActivityDataDemografiBinding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
 
-        listValue()
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        CoroutineScope(Dispatchers.IO).launch {
+            withContext(Dispatchers.Main) {
+                listValue()
+            }
+        }
+    }
 
+    override fun onBackPressed() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 
     private fun listValue() {

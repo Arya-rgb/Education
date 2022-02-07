@@ -13,7 +13,8 @@ import android.widget.RadioGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.thorin.eduaps.data.source.remote.response.TestQuestioner
 import com.thorin.eduaps.databinding.ListTestItemsBinding
-import com.thorin.eduaps.ui.home.test.TestActivity
+import com.thorin.eduaps.ui.home.test.pretest.TestActivity
+import com.thorin.eduaps.ui.home.test.posttest.PostTestActivity
 import com.thorin.eduaps.ui.home.test.testresult.TestResultActivity
 
 
@@ -45,24 +46,45 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
                     if (itemView.context is TestActivity) {
                         (itemView.context as TestActivity).alertInfo1()
                     }
+
+                    //for post test activity
+                    if (itemView.context is PostTestActivity) {
+                        (itemView.context as PostTestActivity).alertInfo1()
+                    }
+
                 }
 
                 if (idSoal.text.contains("1. Saya setuju jika orang tua siswa dan guru diberikan penyuluhan materi pencegahan kekerasan seksual pada anak di sekolah")) {
                     if (itemView.context is TestActivity) {
                         (itemView.context as TestActivity).alertInfo2()
                     }
+
+                    if (itemView.context is PostTestActivity) {
+                        (itemView.context as PostTestActivity).alertInfo2()
+                    }
+
                 }
 
                 if (idSoal.text.contains("1. Saya mengajarkan kepada anak tentang daerah pribadi tubuh anak yang harus selalu ditutupi pakaian dan tidak boleh disentuh orang lain, kecuali oleh orang yang dikenal anak")) {
                     if (itemView.context is TestActivity) {
                         (itemView.context as TestActivity).alertInfo3()
                     }
+
+                    if (itemView.context is PostTestActivity) {
+                        (itemView.context as PostTestActivity).alertInfo3()
+                    }
+
                 }
 
                 if (idSoal.text.contains("1. Saya menyadari bahwa anak anak usia berapapun berisiko mengalami kekerasan seksual")) {
                     if (itemView.context is TestActivity) {
                         (itemView.context as TestActivity).alertInfo4()
                     }
+
+                    if (itemView.context is PostTestActivity) {
+                        (itemView.context as PostTestActivity).alertInfo4()
+                    }
+
                 }
 
                 if (opsi3.text.contains("C")) {
@@ -104,10 +126,16 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
                         (itemView.context as TestActivity).nextPage()
                     }
 
+                    if (itemView.context is PostTestActivity) {
+                        (itemView.context as PostTestActivity).nextPage()
+                    }
+
                     if (kunciJawaban.text.contains("akhir_soal")) {
-                        Intent(itemView.context, TestResultActivity::class.java).also {
-                            itemView.context.startActivity(it)
-                            (itemView.context as Activity).finish()
+                        if (itemView.context is TestActivity) {
+                            (itemView.context as TestActivity).movePreTest()
+                        }
+                        if (itemView.context is PostTestActivity) {
+                            (itemView.context as PostTestActivity).movePostTest()
                         }
                     }
 

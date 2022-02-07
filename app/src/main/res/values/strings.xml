@@ -8,4 +8,10 @@
     <string name="title_pelajaranku">Pelajaranku</string>
     <string name="title_profile">Profile</string>
     <string name="txt_logout">Keluar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name_with_index">PdfRendererBasic (%1$d/%2$d)</string>
+    <string name="textview">TextView</string>
+    <string name="komentar">Komentar</string>
+    <string name="pdf_page_counter">%d / %d</string>
 </resources>

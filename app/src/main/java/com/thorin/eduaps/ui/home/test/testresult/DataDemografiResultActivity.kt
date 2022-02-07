@@ -9,8 +9,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.thorin.eduaps.databinding.ActivityDataDemografiResultBinding
-import com.thorin.eduaps.databinding.ActivityTest2ResultBinding
-import com.thorin.eduaps.ui.home.test.ActivityListQuest
 
 class DataDemografiResultActivity : AppCompatActivity() {
 
@@ -28,13 +26,6 @@ class DataDemografiResultActivity : AppCompatActivity() {
 
 
         saveProgress()
-
-        binding.button4.setOnClickListener {
-            Intent(this, ActivityListQuest::class.java).also {
-                startActivity(it)
-                finish()
-            }
-        }
 
     }
 

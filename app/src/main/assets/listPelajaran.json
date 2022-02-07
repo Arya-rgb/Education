@@ -1,0 +1,77 @@
+{
+  "list_pelajaran": [
+    {
+      "id_soal": "pel1_ppt",
+      "judul_pelajaran": "Kekerasan Seksual Pada Anak",
+      "jenis_file": "pdf",
+      "link_file": "https://drive.google.com/file/d/1vTBjkW8Ooqwtvbnp-spsCKauTeU3jdbE/view?usp=sharing",
+      "deskripsi_pelajaran": "ppt1 pptx",
+      "jumlah_slide": "30 Slide"
+    },
+    {
+      "id_soal": "pel1_video",
+      "judul_pelajaran": "Pencegahan Kekerasan Seksual",
+      "jenis_file": "video",
+      "link_file": "psLzWphLzNY",
+      "deskripsi_pelajaran": "video 1 youtube",
+      "jumlah_slide": "17:05 Menit"
+    },
+    {
+      "id_soal": "pel2_ppt",
+      "judul_pelajaran": "Perlindungan Anak Dari Kekerasan Seksual",
+      "jenis_file": "pdf",
+      "link_file": "https://drive.google.com/file/d/1UYoz9iUHPflKkIGZa_vfpagiVhUt0aV1/view?usp=sharing",
+      "deskripsi_pelajaran": "ppt2 pptx",
+      "jumlah_slide": "11 Slide"
+    },
+    {
+      "id_soal": "pel2_video",
+      "judul_pelajaran": "Upaya Pencegahan Kekerasan Seksual",
+      "jenis_file": "video",
+      "link_file": "4Ky2d6dEBcY",
+      "deskripsi_pelajaran": "video 2 youtube",
+      "jumlah_slide": "05:46 Menit"
+    },
+    {
+      "id_soal": "pel3_ppt",
+      "judul_pelajaran": "Intervensi Orang Tua dan Guru dalam mencegah Kekerasan Seksual Pada Anak",
+      "jenis_file": "pdf",
+      "link_file": "https://drive.google.com/file/d/1wtsLW96Us8m22npR4qOws0vY2lxE90Ch/view?usp=sharing",
+      "deskripsi_pelajaran": "ppt3 pptx",
+      "jumlah_slide": "11 Slide"
+    },
+    {
+      "id_soal": "pel3_video",
+      "judul_pelajaran": "Lagu Sentuhan Boleh Sentuhan Tidak Boleh",
+      "jenis_file": "video",
+      "link_file": "Q6S84Ly95aU",
+      "deskripsi_pelajaran": "video 3 youtube",
+      "jumlah_slide": "02:04 Menit"
+    },
+    {
+      "id_soal": "pel4_ppt",
+      "judul_pelajaran": "Selamatkan Anak Dari Kekerasan Seksual",
+      "jenis_file": "pdf",
+      "link_file": "https://drive.google.com/file/d/1U9_fPfoLK8KsSGCqF_jRfoLYUokPFUe_/view?usp=sharing",
+      "deskripsi_pelajaran": "ppt4 pptx",
+      "jumlah_slide": "26 Slide"
+    },
+    {
+      "id_soal": "pel4_video",
+      "judul_pelajaran": "Metode Tangkis",
+      "jenis_file": "video",
+      "link_file": "6tPw07KJk0U",
+      "deskripsi_pelajaran": "video 4 youtube",
+      "jumlah_slide": "03:07 Menit"
+    },
+    {
+      "id_soal": "pel5_video",
+      "judul_pelajaran": "Informasi Tentang Kekerasan Seksual Pada Anak Dan Remaja",
+      "jenis_file": "video",
+      "link_file": "cpF3OgKWxmg",
+      "deskripsi_pelajaran": "video 5 youtube",
+      "jumlah_slide": "04:09 Menit"
+    }
+  ]
+}
+
