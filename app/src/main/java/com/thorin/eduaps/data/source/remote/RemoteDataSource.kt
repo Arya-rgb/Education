@@ -3,10 +3,7 @@ package com.thorin.eduaps.data.source.remote
 import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import com.thorin.eduaps.data.source.remote.response.ChatResponse
-import com.thorin.eduaps.data.source.remote.response.ListPelajaranResponse
-import com.thorin.eduaps.data.source.remote.response.TestQuestioner
-import com.thorin.eduaps.data.source.remote.response.UserResponse
+import com.thorin.eduaps.data.source.remote.response.*
 import com.thorin.eduaps.utils.JsonHelper
 
 class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
@@ -87,6 +84,38 @@ class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
 
     interface LoadChatDataCallBack {
         fun onDataChatReceived(chatResponse: List<ChatResponse>)
+    }
+
+    fun getProgressUser(callback: DataProgressCallback) {
+        val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+        val list = ArrayList<ChatResponse>()
+        val reff: DatabaseReference =
+            FirebaseDatabase.getInstance().getReference("progress").child(mAuth.currentUser?.uid.toString())
+        reff.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    val statusBelajar = snapshot.child("Status_Belajar").value.toString()
+                    val statusPostTest = snapshot.child("Status_Post_Test").value.toString()
+                    val statusPreTest = snapshot.child("Status_Pre_Test").value.toString()
+
+                    val retriveDataProgress = ProgressResponse(statusBelajar, statusPostTest, statusPreTest)
+                    callback.onDataProgressReceived(retriveDataProgress)
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.d("error", "error: " + error.message)
+            }
+
+        })
+
+    }
+
+    interface DataProgressCallback {
+
+        fun onDataProgressReceived(progressResponse: ProgressResponse)
+
     }
 
 }

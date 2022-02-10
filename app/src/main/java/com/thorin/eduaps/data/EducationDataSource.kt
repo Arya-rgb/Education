@@ -1,10 +1,7 @@
 package com.thorin.eduaps.data
 
 import androidx.lifecycle.LiveData
-import com.thorin.eduaps.data.source.remote.response.ChatResponse
-import com.thorin.eduaps.data.source.remote.response.ListPelajaranResponse
-import com.thorin.eduaps.data.source.remote.response.TestQuestioner
-import com.thorin.eduaps.data.source.remote.response.UserResponse
+import com.thorin.eduaps.data.source.remote.response.*
 
 interface EducationDataSource {
 
@@ -15,5 +12,7 @@ interface EducationDataSource {
     fun getDataPelajaran(): LiveData<List<ListPelajaranResponse>>
 
     fun getChatData(label: String): LiveData<List<ChatResponse>>
+
+    fun getProgress(): LiveData<ProgressResponse>
 
 }

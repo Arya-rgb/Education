@@ -3,10 +3,7 @@ package com.thorin.eduaps.data
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.thorin.eduaps.data.source.remote.RemoteDataSource
-import com.thorin.eduaps.data.source.remote.response.ChatResponse
-import com.thorin.eduaps.data.source.remote.response.ListPelajaranResponse
-import com.thorin.eduaps.data.source.remote.response.TestQuestioner
-import com.thorin.eduaps.data.source.remote.response.UserResponse
+import com.thorin.eduaps.data.source.remote.response.*
 
 class EducationRepository private constructor(private val remoteDataSource: RemoteDataSource) :
     EducationDataSource {
@@ -106,6 +103,21 @@ class EducationRepository private constructor(private val remoteDataSource: Remo
         })
 
         return dataChatResult
+
+    }
+
+    override fun getProgress(): LiveData<ProgressResponse> {
+
+        val progressResult = MutableLiveData<ProgressResponse>()
+
+        remoteDataSource.getProgressUser(object : RemoteDataSource.DataProgressCallback {
+
+            override fun onDataProgressReceived(progressResponse: ProgressResponse) {
+                progressResult.postValue(progressResponse)
+            }
+        })
+
+        return progressResult
 
     }
 

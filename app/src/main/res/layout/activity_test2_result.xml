@@ -1,71 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.home.test.testresult.TestResultActivity">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animationView"
-        android:layout_marginTop="20dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_fileName="succes_animation.json"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="true"
-        android:layout_gravity="center" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:padding="10dp"
-        android:text="Selamat Anda Telah Menyelesaikan Pre Test Wawasan Perlindungan Anak Dari Kekerasan Seksual"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/animationView"
-        app:layout_constraintStart_toStartOf="@+id/animationView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:padding="10dp"
-        android:gravity="center"
-        android:text="Selanjutnya Anda Bisa Mulai Mempelajari Materi Yang Telah Di Sediakan"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/nilai_pretest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:layout_height="wrap_content"
-        android:text="Selanjutnya"
-        app:layout_constraintEnd_toEndOf="@+id/nilai_pretest"
-        app:layout_constraintStart_toStartOf="@+id/nilai_pretest"
-        app:layout_constraintTop_toBottomOf="@+id/nilai_pretest" />
+        android:orientation="vertical">
 
 
-</LinearLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="succes_animation.json"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Selamat Anda Telah Menyelesaikan Pre Test Wawasan Perlindungan Anak Dari Kekerasan Seksual"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/animationView"
+            app:layout_constraintStart_toStartOf="@+id/animationView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Selanjutnya Anda Bisa Mulai Mempelajari Materi Yang Telah Di Sediakan"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/dataDemografi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Bagian I: Data DEMOGRAFI Sudah Selesai"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Bagian II: Kuisioner Pengetahuan Pencegahan Kekerasan Seksual Pada Anak bagi Ibu dan Guru Sekolah Dasar" />
+
+        <TextView
+            android:id="@+id/nilaipretest1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            tools:text="Nilai2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Bagian III: Kuisioner Sikap Pencegahan Kekerasan Seksual Pada Anak bagi Ibu dan Guru Sekolah Dasar" />
+
+        <TextView
+            android:id="@+id/nilaipretest2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            tools:text="Nilai 3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Bagian IV: Kuisioner Praktik Pencegahan Kekerasan Seksual Pada Anak bagi Ibu dan Guru Sekolah Dasar"/>
+
+        <TextView
+            android:id="@+id/nilaipretest3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            tools:text="nilai 3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Bagian V: Kuisioner Self Awareness terkait Pencegahan Kekerasan Seksual Pada Anak bagi Ibu dan Guru Sekolah Dasar"/>
+
+        <TextView
+            android:id="@+id/nilaipretest4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            tools:text="nilai 4"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Selanjutnya"
+            app:layout_constraintEnd_toEndOf="@+id/nilai_pretest"
+            app:layout_constraintStart_toStartOf="@+id/nilai_pretest"
+            app:layout_constraintTop_toBottomOf="@+id/nilai_pretest" />
+
+    </LinearLayout>
+</ScrollView>

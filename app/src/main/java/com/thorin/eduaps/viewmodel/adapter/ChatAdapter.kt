@@ -1,7 +1,9 @@
 package com.thorin.eduaps.viewmodel.adapter
 
 import android.graphics.Color
+import android.view.Gravity
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -37,7 +39,9 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ViewHolder>() {
                 messageBody.text = dataChat.isi_pesan
 
                 if (dataChat.uid.toString() == mAuth.currentUser?.uid.toString()) {
-                    messageSender.setTextColor(Color.parseColor("#2196F3"))
+                    messageBody.gravity = Gravity.END
+                    messageSender.gravity = Gravity.END
+                    imgThumbnail.visibility = View.GONE
                 }
             }
         }
@@ -54,6 +58,7 @@ class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val dataChat = listChat[position]
+        holder.setIsRecyclable(false)
         holder.bind(dataChat)
 
     }

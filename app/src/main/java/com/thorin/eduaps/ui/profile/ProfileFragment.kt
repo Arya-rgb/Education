@@ -1,7 +1,9 @@
 package com.thorin.eduaps.ui.profile
 
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -43,9 +45,9 @@ class ProfileFragment : Fragment() {
 
         if(currentUser != null) {
 
-            viewModel.getUserProfile().observe(viewLifecycleOwner, {
+            viewModel.getUserProfile().observe(viewLifecycleOwner) {
                 getData(it)
-            })
+            }
 
         } else {
 
@@ -77,6 +79,12 @@ class ProfileFragment : Fragment() {
         """.trimIndent()
         )
         builder.setPositiveButton("Ya") { _, _ ->
+
+            val prefPreTest2: SharedPreferences? =
+                activity?.getSharedPreferences("persetujuan", Context.MODE_PRIVATE)
+
+            prefPreTest2?.edit()?.clear()?.apply()
+
             mAuth.signOut()
             Intent(activity, LoginActivity::class.java).also { back ->
                 startActivity(back)

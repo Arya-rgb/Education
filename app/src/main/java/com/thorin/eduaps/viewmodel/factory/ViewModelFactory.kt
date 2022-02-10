@@ -21,7 +21,6 @@ class ViewModelFactory private constructor(private val mEducationRepository: Edu
             }
     }
 
-    @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when{
             modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
@@ -39,6 +38,10 @@ class ViewModelFactory private constructor(private val mEducationRepository: Edu
             modelClass.isAssignableFrom(ChatViewModel::class.java) -> {
                 ChatViewModel(mEducationRepository) as T
             }
+            modelClass.isAssignableFrom(ProgressViewModel::class.java) -> {
+                ProgressViewModel(mEducationRepository) as T
+            }
+
             else -> throw Throwable("Unknown ViewModel class : "+modelClass.name)
         }
     }

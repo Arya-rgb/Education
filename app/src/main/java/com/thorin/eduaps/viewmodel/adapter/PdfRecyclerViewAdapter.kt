@@ -61,14 +61,6 @@ class PdfRecyclerViewAdapter(context: Context) :
         layoutManager = myLinearLayoutManager
     }
 
-    fun nextPage() {
-        val position = (layoutManager as LinearLayoutManager).findLastVisibleItemPosition()
-        if (position != mPosition && position != -1) {
-            mPosition = position
-            mOnPageChangedListener?.onPageChanged(mPosition + 1, adapter?.itemCount ?: 0)
-        }
-    }
-
     override fun setup(file: File) {
         val adapter: PdfPageAdapter<*> = adapter as PdfPageAdapter<*>
         adapter.setup(PdfRendererProxy(file, mQuality), Utils.getScreenWidth(context as Activity))

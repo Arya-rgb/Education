@@ -1,6 +1,8 @@
 package com.thorin.eduaps.ui.login
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -52,9 +54,14 @@ class LoginActivity : AppCompatActivity() {
 
     private fun checkLogin() {
 
+        val prefPreTest2: SharedPreferences =
+            this.getSharedPreferences("persetujuan", Context.MODE_PRIVATE)
+
+        val persetujuan = prefPreTest2.getString("setuju", null)
+
         val user = mAuth.currentUser
 
-        if (null != user) {
+        if (null != user && persetujuan == "setuju") {
             Intent(this, MainActivity::class.java).also {
                 startActivity(it)
                 finish()
@@ -96,7 +103,7 @@ class LoginActivity : AppCompatActivity() {
                     Log.d("Sign in Activity", "SignInWithCredential:success")
 
                     binding.idProgressbar.visibility = View.GONE
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, PersetujuanUserActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                     finish()

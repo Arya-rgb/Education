@@ -59,6 +59,14 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
                         (itemView.context as TestActivity).alertInfo2()
                     }
 
+                    if (itemView.context is TestActivity) {
+                        (itemView.context as TestActivity).saveProgress1()
+                    }
+
+                    if (itemView.context is PostTestActivity) {
+                        (itemView.context as PostTestActivity).saveProgress1()
+                    }
+
                     if (itemView.context is PostTestActivity) {
                         (itemView.context as PostTestActivity).alertInfo2()
                     }
@@ -70,6 +78,14 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
                         (itemView.context as TestActivity).alertInfo3()
                     }
 
+                    if (itemView.context is TestActivity) {
+                        (itemView.context as TestActivity).saveProgress2()
+                    }
+
+                    if (itemView.context is PostTestActivity) {
+                        (itemView.context as PostTestActivity).saveProgress2()
+                    }
+
                     if (itemView.context is PostTestActivity) {
                         (itemView.context as PostTestActivity).alertInfo3()
                     }
@@ -79,6 +95,14 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
                 if (idSoal.text.contains("1. Saya menyadari bahwa anak anak usia berapapun berisiko mengalami kekerasan seksual")) {
                     if (itemView.context is TestActivity) {
                         (itemView.context as TestActivity).alertInfo4()
+                    }
+
+                    if (itemView.context is TestActivity) {
+                        (itemView.context as TestActivity).saveProgress3()
+                    }
+
+                    if (itemView.context is PostTestActivity) {
+                        (itemView.context as PostTestActivity).saveProgress3()
                     }
 
                     if (itemView.context is PostTestActivity) {
@@ -117,7 +141,7 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
 
                     if (radioButton?.text?.contains(kunciJawaban.text) == true) {
                         val results =
-                            prefPreTest2.getString("scorePreTest2", null)?.toInt()?.plus(1)
+                            prefPreTest2.getString("scorePreTest2", 0.toString())?.toInt()?.plus(1)
                         edit.putString("scorePreTest2", results.toString())
                         edit.apply()
                     }
@@ -131,12 +155,14 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
                     }
 
                     if (kunciJawaban.text.contains("akhir_soal")) {
+
                         if (itemView.context is TestActivity) {
                             (itemView.context as TestActivity).movePreTest()
                         }
                         if (itemView.context is PostTestActivity) {
                             (itemView.context as PostTestActivity).movePostTest()
                         }
+
                     }
 
                 }

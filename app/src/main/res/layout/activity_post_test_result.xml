@@ -46,16 +46,77 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
-        android:id="@+id/nilai_posttest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Bagian II: Kuisioner Pengetahuan Pencegahan Kekerasan Seksual Pada Anak bagi Ibu dan Guru Sekolah Dasar" />
+
+    <TextView
+        android:id="@+id/nilaiposttest1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        tools:text="Nilai2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Bagian III: Kuisioner Sikap Pencegahan Kekerasan Seksual Pada Anak bagi Ibu dan Guru Sekolah Dasar" />
+
+    <TextView
+        android:id="@+id/nilaiposttest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        tools:text="Nilai 3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Bagian IV: Kuisioner Praktik Pencegahan Kekerasan Seksual Pada Anak bagi Ibu dan Guru Sekolah Dasar"/>
+
+    <TextView
+        android:id="@+id/nilaiposttest3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        tools:text="nilai 3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Bagian V: Kuisioner Self Awareness terkait Pencegahan Kekerasan Seksual Pada Anak bagi Ibu dan Guru Sekolah Dasar"/>
+
+    <TextView
+        android:id="@+id/nilaiposttest4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        tools:text="nilai 4"/>
+
 
     <Button
         android:id="@+id/button5"

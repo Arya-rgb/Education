@@ -16,11 +16,13 @@
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_detail_pelajaran_pdf.xml" value="0.1743659420289855" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_detail_pelajaran_video.xml" value="0.1743659420289855" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_detail_pelajaran_video2.xml" value="0.25" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_isi_nama.xml" value="0.25" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_list_quest.xml" value="0.33" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_pdfviewer.xml" value="0.22" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_pdfviewer.xml" value="0.33" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_pelajaran.xml" value="0.1743659420289855" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_persetujuan_user.xml" value="0.11" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_post_test.xml" value="0.25" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_post_test_result.xml" value="0.33" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/activity_pretest.xml" value="0.33" />
@@ -46,6 +48,7 @@
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/list_pelajaran.xml" value="0.33" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/list_pre_test_items.xml" value="0.33" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/list_test_items.xml" value="0.33" />
+        <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/persetujuan_user.xml" value="0.21" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/layout/toolbar.xml" value="0.1743659420289855" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/menu/menu_pdf.xml" value="0.20416666666666666" />

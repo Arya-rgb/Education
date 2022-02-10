@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Education">
         <activity
+            android:name=".ui.login.ActivityIsiNama"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.PersetujuanUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.detail.ChatActivity"
             android:exported="false" />
         <activity
@@ -19,6 +25,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.home.test.posttest.PostTestActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
             android:exported="false" />
         <activity
             android:name=".ui.detail.DetailPelajaranVideo"
@@ -27,8 +34,7 @@
         <activity
             android:name=".ui.detail.DetailPelajaranPdf"
             android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
-            android:exported="false"
-            android:windowSoftInputMode="adjustPan" />
+            android:exported="false" />
         <activity
             android:name=".ui.home.pelajaran.PelajaranActivity"
             android:exported="false" />
@@ -36,13 +42,11 @@
             android:name=".ui.home.test.testresult.DataDemografiResultActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.home.test.ActivityListQuest"
-            android:exported="false" />
-        <activity
             android:name=".ui.home.test.testresult.TestResultActivity"
             android:exported="false" />
         <activity
             android:name=".ui.home.test.pretest.TestActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
             android:exported="false" />
         <activity
             android:name=".ui.home.test.pretest.DataDemografiActivity"
