@@ -14,4 +14,19 @@
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/black</item>
     </style>
+
+    <style name="Theme.Education.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="background_item">
+        <item name="android:background">@drawable/item_background_day</item>
+    </style>
+
+
+
+    <style name="Theme.Education.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Education.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -15,6 +15,24 @@
         tools:text="Apa yang di maksud dengan babi ?" />
 
     <TextView
+        android:id="@+id/id_likert"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:text="kosong" />
+
+    <TextView
+        android:id="@+id/bagiansoal_opsi5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        tools:text="Apa yang di maksud dengan babi ?" />
+
+    <TextView
         android:id="@+id/kunci_jawaban"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,6 +78,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Next" />
+        android:text="Selanjutnya" />
 
 </LinearLayout>

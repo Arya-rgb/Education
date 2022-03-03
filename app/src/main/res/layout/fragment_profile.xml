@@ -21,32 +21,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        tools:text="nama"
+        android:gravity="center"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:text="nama" />
 
     <TextView
         android:id="@+id/id_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        tools:text="email"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="@+id/id_nama"
         app:layout_constraintStart_toStartOf="@+id/id_nama"
-        app:layout_constraintTop_toBottomOf="@+id/id_nama" />
+        app:layout_constraintTop_toBottomOf="@+id/id_nama"
+        tools:text="email" />
 
     <Button
         android:id="@+id/id_btn_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/txt_logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/id_email"
+        app:layout_constraintStart_toStartOf="@+id/id_email"
         app:layout_constraintTop_toBottomOf="@+id/id_email" />
 
 

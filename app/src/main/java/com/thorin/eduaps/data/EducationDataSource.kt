@@ -9,10 +9,12 @@ interface EducationDataSource {
 
     fun getTest2(): LiveData<List<TestQuestioner>>
 
-    fun getDataPelajaran(): LiveData<List<ListPelajaranResponse>>
-
     fun getChatData(label: String): LiveData<List<ChatResponse>>
 
     fun getProgress(): LiveData<ProgressResponse>
+
+    fun getDataSoal(): LiveData<List<ListPelajaranResponse>>
+
+    fun getUserData(): LiveData<ProfileResponse>
 
 }

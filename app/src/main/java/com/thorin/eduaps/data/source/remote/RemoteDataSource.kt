@@ -4,18 +4,17 @@ import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.thorin.eduaps.data.source.remote.response.*
-import com.thorin.eduaps.utils.JsonHelper
 
-class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
+class RemoteDataSource private constructor() {
 
 
     companion object {
         @Volatile
         private var instance: RemoteDataSource? = null
 
-        fun getInstance(helper: JsonHelper): RemoteDataSource =
+        fun getInstance(): RemoteDataSource =
             instance ?: synchronized(this) {
-                RemoteDataSource(helper).apply { instance = this }
+                RemoteDataSource().apply { instance = this }
             }
     }
 
@@ -39,24 +38,34 @@ class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
 
     }
 
-    fun getTest2(callback: LoadPretest2Callback) {
+    fun getTest2(callback: LoadPretest2Callback): List<TestQuestioner> {
 
-        callback.onPretest2Received(jsonHelper.loadTest2())
+        val list = ArrayList<TestQuestioner>()
+        val reff: DatabaseReference =
+            FirebaseDatabase.getInstance().getReference("bagian_dua_kuisioner")
+        reff.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (dataSnapshot in snapshot.children) {
+                        val dataChat = dataSnapshot.getValue(TestQuestioner::class.java)
+                        list.add(dataChat!!)
+                        callback.onPretest2Received(list)
+                    }
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.d("error", "error: " + error.message)
+            }
+
+        })
+        return list
 
     }
 
     interface LoadPretest2Callback {
         fun onPretest2Received(preTestQuestioner: List<TestQuestioner>)
     }
-
-    fun getDataPelajaran(callback: LoadDataPelajaranCallback) {
-        callback.onDataPelajaranReceived(jsonHelper.loadListPelajaran())
-    }
-
-    interface LoadDataPelajaranCallback {
-        fun onDataPelajaranReceived(listPelajaranResponse: List<ListPelajaranResponse>)
-    }
-
 
     fun getChatData(label: String, callback: LoadChatDataCallBack): List<ChatResponse> {
         val list = ArrayList<ChatResponse>()
@@ -86,11 +95,44 @@ class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
         fun onDataChatReceived(chatResponse: List<ChatResponse>)
     }
 
+    fun getUserName(callback: DataUserNameCallback) {
+        val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+        val list = ArrayList<ProfileResponse>()
+        val reff: DatabaseReference =
+            FirebaseDatabase.getInstance().getReference("data_demografi")
+                .child(mAuth.currentUser?.uid.toString())
+        reff.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    val alamatResponden = snapshot.child("alamat_responden").value.toString()
+                    val namaResponden = snapshot.child("nama_responden").value.toString()
+
+                    val retriveDataProgress =
+                        ProfileResponse(alamatResponden, namaResponden)
+                    callback.onDataUserReceived(retriveDataProgress)
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.d("error", "error: " + error.message)
+            }
+
+        })
+
+    }
+
+    interface DataUserNameCallback {
+        fun onDataUserReceived(profileResponse: ProfileResponse)
+    }
+
+
     fun getProgressUser(callback: DataProgressCallback) {
         val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
         val list = ArrayList<ChatResponse>()
         val reff: DatabaseReference =
-            FirebaseDatabase.getInstance().getReference("progress").child(mAuth.currentUser?.uid.toString())
+            FirebaseDatabase.getInstance().getReference("progress")
+                .child(mAuth.currentUser?.uid.toString())
         reff.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
@@ -98,7 +140,8 @@ class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
                     val statusPostTest = snapshot.child("Status_Post_Test").value.toString()
                     val statusPreTest = snapshot.child("Status_Pre_Test").value.toString()
 
-                    val retriveDataProgress = ProgressResponse(statusBelajar, statusPostTest, statusPreTest)
+                    val retriveDataProgress =
+                        ProgressResponse(statusBelajar, statusPostTest, statusPreTest)
                     callback.onDataProgressReceived(retriveDataProgress)
 
                 }
@@ -118,5 +161,36 @@ class RemoteDataSource private constructor(private val jsonHelper: JsonHelper) {
 
     }
 
+    fun getDatasoal(callback: LoadSoalCallBack): List<ListPelajaranResponse> {
+        val list = ArrayList<ListPelajaranResponse>()
+        val reff: DatabaseReference =
+            FirebaseDatabase.getInstance().getReference("list_pelajaran")
+        reff.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (dataSnapshot in snapshot.children) {
+                        val dataChat = dataSnapshot.getValue(ListPelajaranResponse::class.java)
+                        list.add(dataChat!!)
+                        callback.onDatasoalCallBack(list)
+                    }
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.d("error", "error: " + error.message)
+            }
+
+        })
+        return list
+    }
+
+
+    interface LoadSoalCallBack {
+        fun onDatasoalCallBack(listPelajaranResponse: List<ListPelajaranResponse>)
+    }
+
 }
+
+
+
 

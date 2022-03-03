@@ -51,6 +51,32 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_margin="8dp"
+            android:text="Asal Sekolah"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="Asal Sekolah">
+
+            <AutoCompleteTextView
+                android:id="@+id/id_asal_sekolah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="LabelFor"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_margin="8dp"
             android:text="Jenis Kelamin"/>
 
 
@@ -75,19 +101,49 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_margin="8dp"
-            android:text="Pekerjaan"/>
+            android:text="Status Sekarang"/>
+
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/id_status_flow"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:hint="Status">
+
+            <AutoCompleteTextView
+                android:id="@+id/id_status_responden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="LabelFor"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/id_pekerjaan_dropdown3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:text="Pekerjaan"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/id_pekerjaan_dropdown2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:visibility="gone"
             android:hint="Pekerjaan ">
 
             <AutoCompleteTextView
                 android:id="@+id/id_pekerjaan_dropdown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 tools:ignore="LabelFor"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -145,9 +201,11 @@
             android:text="Pendapatan Keluarga "/>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/id_show_pendapatan_garut"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_margin="8dp"
             android:hint="Untuk peserta dari Kabupaten Garut">
 
@@ -161,9 +219,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/id_show_pendapatan_bandung"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_margin="8dp"
             android:hint="Untuk peserta dari Kota Bandung">
 
@@ -177,9 +237,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/id_show_pendapatan_kabupatenbandung"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_margin="8dp"
             android:hint="Untuk peserta dari Kabupaten Bandung">
 
@@ -265,7 +327,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:visibility="gone"
             android:layout_margin="8dp"
             android:hint="Jika Ya, Darimana ?">
 
@@ -273,6 +335,7 @@
                 android:id="@+id/id_yadarimana_dropdown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:inputType="none"
                 tools:ignore="LabelFor"/>
 
@@ -340,7 +403,6 @@
                 android:id="@+id/id_org_ygrawatanak_dropdown"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="none"
                 android:hint="Orang yang merawat anak anda"
                 tools:ignore="LabelFor"/>
 

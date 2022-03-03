@@ -57,7 +57,6 @@ class PostTestResultActivity : AppCompatActivity() {
         refUser.updateChildren(userHashMap)
             .addOnCompleteListener { tasks ->
                 if (tasks.isSuccessful) {
-                    getdataNilai()
                     progressdialog.dismiss()
                     Toast.makeText(this, "Progress Di Simpan", Toast.LENGTH_SHORT).show()
                 } else {
@@ -68,43 +67,7 @@ class PostTestResultActivity : AppCompatActivity() {
     }
 
 
-    private fun getdataNilai() {
 
-        val progressdialog = ProgressDialog(this)
-        progressdialog.setMessage("Mengambil Nilai...")
-
-        progressdialog.show()
-
-        val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
-        val reff: DatabaseReference =
-            FirebaseDatabase.getInstance().getReference("nilai_test")
-                .child(mAuth.currentUser?.uid.toString())
-        reff.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    val nilaiPreTest1 = snapshot.child("nilaiPostTest1").value.toString()
-                    val nilaiPreTest2 = snapshot.child("nilaiPostTest2").value.toString()
-                    val nilaiPreTest3 = snapshot.child("nilaiPostTest3").value.toString()
-                    val nilaiPreTest4 = snapshot.child("nilaiPostTest4").value.toString()
-
-                    binding.nilaiposttest1.text = "Anda Benar $nilaiPreTest1 Dari 30 Pertanyaan"
-                    binding.nilaiposttest2.text = "Anda Benar $nilaiPreTest2 Dari 13 Pertanyaan"
-                    binding.nilaiposttest3.text = "Anda Benar $nilaiPreTest3 Dari 17 Pertanyaan"
-                    binding.nilaiposttest4.text = "Anda Benar $nilaiPreTest4 Dari 20 Pertanyaan"
-
-                    progressdialog.dismiss()
-
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Log.d("error", "error: " + error.message)
-                progressdialog.dismiss()
-            }
-
-
-        })
-    }
 
     override fun onBackPressed() {
         startActivity(Intent(this, MainActivity::class.java))

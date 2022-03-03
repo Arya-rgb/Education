@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp">
 
@@ -10,10 +11,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="100dp"
         android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_user"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            tools:src="@drawable/ic_logo"/>
+
+        <TextView
+            android:id="@+id/name_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Memuat Data..."
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/lokasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Memuat Data..."
+            android:layout_marginBottom="20dp"/>
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/nav_pretest"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="4dp"
@@ -24,16 +55,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/background_item"
                 android:orientation="vertical"
                 android:padding="16dp">
+
+
 
                 <TextView
                     android:id="@+id/id_bagian1_selesai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
+                    android:drawableEnd="@drawable/ic_baseline_book_online_24"
                     android:gravity="start"
-                    android:text="Belum Selesai"
+                    android:text="Belum Ada Progress/Memuat Progress..."
                     android:textSize="12sp" />
 
                 <TextView
@@ -64,26 +99,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/background_item"
                 android:orientation="vertical"
                 android:padding="16dp">
-
-                <TextView
-                    android:id="@+id/id_bagian2_selesai"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:gravity="start"
-                    android:text="Belum Selesai"
-                    android:textSize="12sp" />
-
+                
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
                     android:gravity="start"
                     android:text="Belajar"
+                    android:drawableEnd="@drawable/ic_baseline_menu_book_24"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
                 <TextView
                     android:id="@+id/tv_item_description2"
                     android:layout_width="match_parent"
@@ -102,19 +130,23 @@
             app:cardElevation="4dp"
             app:cardMaxElevation="4dp"
             app:cardUseCompatPadding="true">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/background_item"
                 android:orientation="vertical"
                 android:padding="16dp">
+
 
                 <TextView
                     android:id="@+id/id_bagian3_selesai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
+                    android:drawableEnd="@drawable/ic_baseline_library_books_24"
                     android:gravity="start"
-                    android:text="Belum Selesai"
+                    android:text="Belum Ada Progress/Memuat Progress..."
                     android:textSize="12sp" />
 
                 <TextView
@@ -125,6 +157,7 @@
                     android:text="Post Test"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

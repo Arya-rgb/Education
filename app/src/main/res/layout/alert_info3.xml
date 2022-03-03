@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="20dp"
     android:orientation="vertical">
 
     <TextView
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
-        android:text="1. Isilah dengan memberikan tanda silang (x) pada pilihan jawaban yang menurut Anda benar"/>
+        android:text="1. Isilah dengan memberikan tanda ceklist (✓) pada pilihan jawaban tindakan yang biasa anda lakukan sehari-hari"/>
 
     <TextView
         android:layout_width="match_parent"

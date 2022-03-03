@@ -12,6 +12,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -89,7 +90,22 @@ class DetailPelajaranVideo : AppCompatActivity() {
         }
 
         binding.btSend.setOnClickListener {
-            sendata()
+
+            when {
+                binding.etMessage.text.isNullOrBlank() -> {
+                    Snackbar.make(
+                        binding.root,
+                        "Silahkan isi pesan terlebih dahulu ya...",
+                        Snackbar.LENGTH_SHORT
+                    ).show()
+                }
+                else -> {
+
+                    sendata()
+
+                }
+            }
+
         }
 
 
@@ -122,6 +138,7 @@ class DetailPelajaranVideo : AppCompatActivity() {
         dbRef.updateChildren(userHashMap)
             .addOnCompleteListener { tasks ->
                 if (tasks.isSuccessful) {
+                    binding.etMessage.setText("")
                     progressdialog.dismiss()
                 } else {
                     progressdialog.dismiss()
@@ -152,7 +169,7 @@ class DetailPelajaranVideo : AppCompatActivity() {
         if (binding.youtubeVideoPlayer.isFullScreen()) binding.youtubeVideoPlayer.exitFullScreen() else super.onBackPressed()
     }
 
-    fun alertInfo() {
+    private fun alertInfo() {
         val builder = AlertDialog.Builder(this)
         builder.setView(LayoutInflater.from(this).inflate(R.layout.alert_rotate_phone, null))
         builder.setPositiveButton("Oke") { dialog, _ ->

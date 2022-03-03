@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/Education/app/src/main/res/layout/activity_isi_nama.xml" value="0.17074275362318841" />
+        <entry key="..\:/Project/Education/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
+        <entry key="..\:/Project/Education/app/src/main/res/layout/fragment_home.xml" value="0.5" />
+        <entry key="..\:/Project/Education/app/src/main/res/layout/fragment_pdf_renderer.xml" value="0.17074275362318841" />
+        <entry key="..\:/Project/Education/app/src/main/res/layout/item_belajar.xml" value="0.17074275362318841" />
+        <entry key="..\:/Project/Education/app/src/main/res/layout/list_item.xml" value="0.17074275362318841" />
+        <entry key="..\:/Project/Education/app/src/main/res/layout/list_test_items.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/drawable/background_page_counter.xml" value="0.2055" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/drawable/bg_item_list.xml" value="0.142" />
         <entry key="..\:/Users/Dicky/AndroidStudioProjects/Education/app/src/main/res/drawable/bg_white_rounded.xml" value="0.142" />

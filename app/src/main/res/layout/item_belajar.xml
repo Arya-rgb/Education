@@ -4,77 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
-    android:orientation="vertical"
-    app:cardCornerRadius="4dp"
-    app:cardElevation="4dp"
-    app:cardMaxElevation="4dp"
-    android:padding="16dp"
-    app:cardUseCompatPadding="true">
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/item_movie_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/img_poster"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:scaleType="centerCrop"
-            tools:src="@mipmap/ic_launcher"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription" />
-
-
-
-        <TextView
-            android:id="@+id/pelajaran_name"
+            android:id="@+id/iv_item_image"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:ellipsize="end"
-            android:gravity="start"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintDimensionRatio="H,1.5:1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/img_poster"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Nama Pelajaran" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#7F000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top_space" />
+
+        <Space
+            android:id="@+id/top_space"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_item_title"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/jumlah_slide"
+            android:id="@+id/tv_item_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:gravity="start"
-            android:textSize="12sp"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@+id/jenis_file"
-            app:layout_constraintStart_toStartOf="@+id/jenis_file"
-            app:layout_constraintTop_toBottomOf="@+id/jenis_file"
-            tools:text="Jumlah Slide" />
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="#FFFFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/tv_item_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="nama pelajaran" />
 
         <TextView
-            android:id="@+id/jenis_file"
+            android:id="@+id/tv_item_subtitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:ellipsize="end"
-            android:gravity="start"
-            android:maxLines="1"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/pelajaran_name"
-            app:layout_constraintStart_toStartOf="@+id/pelajaran_name"
-            app:layout_constraintTop_toBottomOf="@+id/pelajaran_name"
-            tools:text="Jenis File" />
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#B3FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_item_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="jenis file" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

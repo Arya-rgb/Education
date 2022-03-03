@@ -10,7 +10,6 @@ import com.thorin.eduaps.data.source.remote.response.ListPelajaranResponse
 import com.thorin.eduaps.databinding.ItemBelajarBinding
 import com.thorin.eduaps.ui.detail.DetailPelajaranPdf
 import com.thorin.eduaps.ui.detail.DetailPelajaranVideo
-import com.thorin.eduaps.ui.navigation.MainActivity
 
 class PelajaranAdapter : RecyclerView.Adapter<PelajaranAdapter.ViewHolder>() {
 
@@ -35,19 +34,11 @@ class PelajaranAdapter : RecyclerView.Adapter<PelajaranAdapter.ViewHolder>() {
 
         fun bind(dataBelajar: ListPelajaranResponse) {
             with(binding) {
-                pelajaranName.text = dataBelajar.judul_pelajaran
-                jenisFile.text = dataBelajar.jenis_file
-                jumlahSlide.text = dataBelajar.jumlah_slide
-
-                if (dataBelajar.jenis_file == "video") {
-                    Glide.with(itemView.context)
-                        .load(R.drawable.icon_video)
-                        .into(imgPoster)
-                } else {
-                    Glide.with(itemView.context)
-                        .load(R.drawable.icon_dokumen)
-                        .into(imgPoster)
-                }
+                tvItemTitle.text = dataBelajar.judul_pelajaran
+                tvItemSubtitle.text = dataBelajar.jenis_file
+                Glide.with(itemView.context)
+                    .load(dataBelajar.z_linkgambar)
+                    .into(ivItemImage)
             }
         }
 
@@ -67,12 +58,12 @@ class PelajaranAdapter : RecyclerView.Adapter<PelajaranAdapter.ViewHolder>() {
         holder.bind(dataBelajar)
 
         val dataPelajaran = ListPelajaranResponse(
-            dataBelajar.id_soal,
-            dataBelajar.judul_pelajaran,
-            dataBelajar.jenis_file,
-            dataBelajar.link_file,
             dataBelajar.deskripsi_pelajaran,
-            dataBelajar.jumlah_slide
+            dataBelajar.id_soal,
+            dataBelajar.jenis_file,
+            dataBelajar.judul_pelajaran,
+            dataBelajar.jumlah_slide,
+            dataBelajar.link_file
         )
 
 
@@ -82,7 +73,8 @@ class PelajaranAdapter : RecyclerView.Adapter<PelajaranAdapter.ViewHolder>() {
                 moveDetailPdf.putExtra(DetailPelajaranPdf.EXTRA_PELAJARAN, dataPelajaran)
                 holder.itemView.context.startActivity(moveDetailPdf)
             } else {
-                val moveDetailPdf = Intent(holder.itemView.context, DetailPelajaranVideo::class.java)
+                val moveDetailPdf =
+                    Intent(holder.itemView.context, DetailPelajaranVideo::class.java)
                 moveDetailPdf.putExtra(DetailPelajaranVideo.EXTRA_PELAJARAN, dataPelajaran)
                 holder.itemView.context.startActivity(moveDetailPdf)
             }

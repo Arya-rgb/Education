@@ -1,9 +1,7 @@
 package com.thorin.eduaps.viewmodel.adapter
 
 
-import android.app.Activity
 import android.content.Context
-import android.content.Intent
 import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.View
@@ -13,9 +11,8 @@ import android.widget.RadioGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.thorin.eduaps.data.source.remote.response.TestQuestioner
 import com.thorin.eduaps.databinding.ListTestItemsBinding
-import com.thorin.eduaps.ui.home.test.pretest.TestActivity
 import com.thorin.eduaps.ui.home.test.posttest.PostTestActivity
-import com.thorin.eduaps.ui.home.test.testresult.TestResultActivity
+import com.thorin.eduaps.ui.home.test.pretest.TestActivity
 
 
 class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
@@ -36,11 +33,13 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
         fun bind(dataTest: TestQuestioner) {
             with(binding) {
                 idSoal.text = dataTest.Soal
+                kunciJawaban.text = dataTest.kunci_jawaban
                 opsi1.text = dataTest.opsi_1
                 opsi2.text = dataTest.opsi_2
                 opsi3.text = dataTest.opsi_3
                 opsi4.text = dataTest.opsi_4
-                kunciJawaban.text = dataTest.kunci_jawaban
+                bagiansoalOpsi5.text = dataTest.opsi_5
+                idLikert.text = dataTest.opsi_6
 
                 if (idSoal.text.contains("1. Kekerasan seksual pada anak adalah kegiatan yang melibatkan anak dalam aktivitas seksual, baik melalui alat kelamin/anus atau bukan, yang melanggar hukum dan norma, dilakukan dengan paksaan, kekerasan atau ancaman")) {
                     if (itemView.context is TestActivity) {
@@ -139,6 +138,153 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
                     val selectedId: Int = binding.radioGrupOpsi2.checkedRadioButtonId
                     val radioButton = itemView.findViewById(selectedId) as RadioButton?
 
+                    if (itemView.context is TestActivity) {
+                        var nomerLikert = ""
+                        if (idLikert.text == "positif") {
+                            when (radioButton?.text) {
+                                "A. Sangat Setuju" -> {
+                                    nomerLikert = "4"
+                                }
+                                "B. Setuju" -> {
+                                    nomerLikert = "3"
+                                }
+                                "C. Tidak Setuju" -> {
+                                    nomerLikert = "2"
+                                }
+                                "D. Sangat Tidak Setuju" -> {
+                                    nomerLikert = "1"
+                                }
+                            }
+                        }
+
+                        if (idLikert.text == "negatif") {
+                            when (radioButton?.text) {
+                                "A. Sangat Setuju" -> {
+                                    nomerLikert = "1"
+                                }
+                                "B. Setuju" -> {
+                                    nomerLikert = "2"
+                                }
+                                "C. Tidak Setuju" -> {
+                                    nomerLikert = "3"
+                                }
+                                "D. Sangat Tidak Setuju" -> {
+                                    nomerLikert = "4"
+                                }
+                            }
+                        }
+
+                        if (radioButton?.text?.equals(kunciJawaban.text.toString()) == true && radioButton.text?.equals(
+                                "A. YA"
+                            ) == true
+                        ) {
+                            nomerLikert = "1"
+                        }
+
+                        if (radioButton?.text?.equals(kunciJawaban.text.toString()) == true && radioButton.text?.equals(
+                                "B. TIDAK"
+                            ) == true
+                        ) {
+                            nomerLikert = "1"
+                        }
+
+                        if (radioButton?.text?.equals(kunciJawaban.text.toString()) == false && radioButton.text?.equals(
+                                "A. YA"
+                            ) == true
+                        ) {
+                            nomerLikert = "0"
+                        }
+
+                        if (radioButton?.text?.equals(kunciJawaban.text.toString()) == false && radioButton.text?.equals(
+                                "B. TIDAK"
+                            ) == true
+                        ) {
+                            nomerLikert = "0"
+                        }
+
+                        if (idLikert.text == "" && radioButton?.text?.equals("B. TIDAK") == false && radioButton.text?.equals("A. YA") == false) {
+                            nomerLikert = radioButton.text.toString()
+                        }
+
+                        (itemView.context as TestActivity).saveJawaban(
+                            bagiansoalOpsi5.text.toString(),
+                            nomerLikert
+                        )
+                    }
+
+                    if (itemView.context is PostTestActivity) {
+                        var nomerLikert = ""
+                        if (idLikert.text == "positif") {
+                            when (radioButton?.text) {
+                                "A. Sangat Setuju" -> {
+                                    nomerLikert = "4"
+                                }
+                                "B. Setuju" -> {
+                                    nomerLikert = "3"
+                                }
+                                "C. Tidak Setuju" -> {
+                                    nomerLikert = "2"
+                                }
+                                "D. Sangat Tidak Setuju" -> {
+                                    nomerLikert = "1"
+                                }
+                            }
+                        }
+
+                        if (idLikert.text == "negatif") {
+                            when (radioButton?.text) {
+                                "A. Sangat Setuju" -> {
+                                    nomerLikert = "1"
+                                }
+                                "B. Setuju" -> {
+                                    nomerLikert = "2"
+                                }
+                                "C. Tidak Setuju" -> {
+                                    nomerLikert = "3"
+                                }
+                                "D. Sangat Tidak Setuju" -> {
+                                    nomerLikert = "4"
+                                }
+                            }
+                        }
+
+                        if (radioButton?.text?.equals(kunciJawaban.text.toString()) == true && radioButton.text?.equals(
+                                "A. YA"
+                            ) == true
+                        ) {
+                            nomerLikert = "1"
+                        }
+
+                        if (radioButton?.text?.equals(kunciJawaban.text.toString()) == true && radioButton.text?.equals(
+                                "B. TIDAK"
+                            ) == true
+                        ) {
+                            nomerLikert = "1"
+                        }
+
+                        if (radioButton?.text?.equals(kunciJawaban.text.toString()) == false && radioButton.text?.equals(
+                                "A. YA"
+                            ) == true
+                        ) {
+                            nomerLikert = "0"
+                        }
+
+                        if (radioButton?.text?.equals(kunciJawaban.text.toString()) == false && radioButton.text?.equals(
+                                "B. TIDAK"
+                            ) == true
+                        ) {
+                            nomerLikert = "0"
+                        }
+
+                        if (idLikert.text == "" && radioButton?.text?.equals("B. TIDAK") == false && radioButton.text?.equals("A. YA") == false) {
+                            nomerLikert = radioButton.text.toString()
+                        }
+                        (itemView.context as PostTestActivity).saveJawaban(
+                            bagiansoalOpsi5.text.toString(),
+                            nomerLikert
+                        )
+                    }
+
                     if (radioButton?.text?.contains(kunciJawaban.text) == true) {
                         val results =
                             prefPreTest2.getString("scorePreTest2", 0.toString())?.toInt()?.plus(1)
@@ -148,9 +294,7 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
 
                     if (itemView.context is TestActivity) {
                         (itemView.context as TestActivity).nextPage()
-                    }
-
-                    if (itemView.context is PostTestActivity) {
+                    } else if (itemView.context is PostTestActivity) {
                         (itemView.context as PostTestActivity).nextPage()
                     }
 
@@ -158,11 +302,9 @@ class TestAdapter : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
 
                         if (itemView.context is TestActivity) {
                             (itemView.context as TestActivity).movePreTest()
-                        }
-                        if (itemView.context is PostTestActivity) {
+                        } else if (itemView.context is PostTestActivity) {
                             (itemView.context as PostTestActivity).movePostTest()
                         }
-
                     }
 
                 }

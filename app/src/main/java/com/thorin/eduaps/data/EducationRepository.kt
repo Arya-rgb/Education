@@ -40,11 +40,13 @@ class EducationRepository private constructor(private val remoteDataSource: Remo
                 for (response in preTestQuestioner) {
                     val dataTest2ListAdd = TestQuestioner(
                         response.Soal,
+                        response.kunci_jawaban,
                         response.opsi_1,
                         response.opsi_2,
                         response.opsi_3,
                         response.opsi_4,
-                        response.kunci_jawaban
+                        response.opsi_5,
+                        response.opsi_6
                     )
                     dataTest2List.add(dataTest2ListAdd)
                 }
@@ -54,31 +56,6 @@ class EducationRepository private constructor(private val remoteDataSource: Remo
         })
 
         return dataTest2Result
-
-    }
-
-    override fun getDataPelajaran(): LiveData<List<ListPelajaranResponse>> {
-
-        val dataPelajaranResult = MutableLiveData<List<ListPelajaranResponse>>()
-        remoteDataSource.getDataPelajaran(object : RemoteDataSource.LoadDataPelajaranCallback {
-            override fun onDataPelajaranReceived(listPelajaranResponse: List<ListPelajaranResponse>) {
-                val dataPelajaranList = ArrayList<ListPelajaranResponse>()
-                for (response in listPelajaranResponse) {
-                    val dataPelajaranListAdd = ListPelajaranResponse(
-                        response.id_soal,
-                        response.judul_pelajaran,
-                        response.jenis_file,
-                        response.link_file,
-                        response.deskripsi_pelajaran,
-                        response.jumlah_slide
-                    )
-                    dataPelajaranList.add(dataPelajaranListAdd)
-                }
-                dataPelajaranResult.postValue(dataPelajaranList)
-            }
-        })
-
-        return dataPelajaranResult
 
     }
 
@@ -121,5 +98,46 @@ class EducationRepository private constructor(private val remoteDataSource: Remo
 
     }
 
+    override fun getDataSoal(): LiveData<List<ListPelajaranResponse>> {
 
+        val dataSoalResult = MutableLiveData<List<ListPelajaranResponse>>()
+        remoteDataSource.getDatasoal(object : RemoteDataSource.LoadSoalCallBack {
+            override fun onDatasoalCallBack(listPelajaranResponse: List<ListPelajaranResponse>) {
+                val dataSoalList = ArrayList<ListPelajaranResponse>()
+                for (response in listPelajaranResponse) {
+                    val dataChatListAdd = ListPelajaranResponse(
+                        response.deskripsi_pelajaran,
+                        response.id_soal,
+                        response.jenis_file,
+                        response.judul_pelajaran,
+                        response.jumlah_slide,
+                        response.link_file,
+                        response.z_linkgambar
+                    )
+                    dataSoalList.add(dataChatListAdd)
+
+                }
+
+                dataSoalResult.postValue(dataSoalList)
+
+            }
+
+        })
+
+        return dataSoalResult
+
+    }
+
+    override fun getUserData(): LiveData<ProfileResponse> {
+        val dataUserHome = MutableLiveData<ProfileResponse>()
+
+        remoteDataSource.getUserName(object : RemoteDataSource.DataUserNameCallback {
+
+            override fun onDataUserReceived(profileResponse: ProfileResponse) {
+                dataUserHome.postValue(profileResponse)
+            }
+        })
+
+        return dataUserHome
+    }
 }

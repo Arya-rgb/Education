@@ -57,7 +57,6 @@ class TestResultActivity : AppCompatActivity() {
         refUser.updateChildren(userHashMap)
             .addOnCompleteListener { tasks ->
                 if (tasks.isSuccessful) {
-                    getdataNilai()
                     progressdialog.dismiss()
                     Toast.makeText(this, "Progress Di Simpan", Toast.LENGTH_SHORT).show()
                 } else {
@@ -65,44 +64,6 @@ class TestResultActivity : AppCompatActivity() {
                     Toast.makeText(this, "Fail", Toast.LENGTH_SHORT).show()
                 }
             }
-    }
-
-    private fun getdataNilai() {
-
-        val progressdialog = ProgressDialog(this)
-        progressdialog.setMessage("Mengambil Nilai...")
-
-        progressdialog.show()
-
-        val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
-        val reff: DatabaseReference =
-            FirebaseDatabase.getInstance().getReference("nilai_test")
-                .child(mAuth.currentUser?.uid.toString())
-        reff.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    val nilaiPreTest1 = snapshot.child("nilaiPreTest1").value.toString()
-                    val nilaiPreTest2 = snapshot.child("nilaiPreTest2").value.toString()
-                    val nilaiPreTest3 = snapshot.child("nilaiPreTest3").value.toString()
-                    val nilaiPreTest4 = snapshot.child("nilaiPreTest4").value.toString()
-
-                    binding.nilaipretest1.text = "Anda Benar $nilaiPreTest1 Dari 30 Pertanyaan"
-                    binding.nilaipretest2.text = "Anda Benar $nilaiPreTest2 Dari 13 Pertanyaan"
-                    binding.nilaipretest3.text = "Anda Benar $nilaiPreTest3 Dari 17 Pertanyaan"
-                    binding.nilaipretest4.text = "Anda Benar $nilaiPreTest4 Dari 20 Pertanyaan"
-
-                    progressdialog.dismiss()
-
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                Log.d("error", "error: " + error.message)
-                progressdialog.dismiss()
-            }
-
-
-        })
     }
 
     override fun onBackPressed() {

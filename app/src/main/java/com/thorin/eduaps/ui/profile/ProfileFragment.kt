@@ -12,7 +12,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.thorin.eduaps.R
 import com.thorin.eduaps.data.source.remote.response.UserResponse
@@ -56,7 +55,6 @@ class ProfileFragment : Fragment() {
                 Toast.LENGTH_LONG).show()
 
         }
-
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
         binding.idBtnLogout.setOnClickListener {
@@ -66,7 +64,6 @@ class ProfileFragment : Fragment() {
         }
 
         return binding.root
-
 
     }
 
@@ -83,6 +80,14 @@ class ProfileFragment : Fragment() {
             val prefPreTest2: SharedPreferences? =
                 activity?.getSharedPreferences("persetujuan", Context.MODE_PRIVATE)
 
+            val preTestData: SharedPreferences =
+                requireContext().getSharedPreferences("dataUser", Context.MODE_PRIVATE)
+
+            val prefPreTest3: SharedPreferences? =
+                activity?.getSharedPreferences("data_demografi", Context.MODE_PRIVATE)
+
+            preTestData.edit()?.clear()?.apply()
+            prefPreTest3?.edit()?.clear()?.apply()
             prefPreTest2?.edit()?.clear()?.apply()
 
             mAuth.signOut()
@@ -100,11 +105,15 @@ class ProfileFragment : Fragment() {
 
     private fun getData(it: UserResponse) {
 
+        val preTestData: SharedPreferences =
+            requireContext().getSharedPreferences("dataUser", Context.MODE_PRIVATE)
+
         Glide.with(this)
             .load(it.photoUrl)
+            .placeholder(R.drawable.ic_default_profile)
             .into(binding.imageView2)
 
-        binding.idNama.text = it.nameUser
+        binding.idNama.text = preTestData.getString("nama_user", "Pastikan Koneksi Anda Terhubung Ke Internet")
         binding.idEmail.text = it.emailUser
 
     }

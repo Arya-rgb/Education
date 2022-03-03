@@ -2,10 +2,14 @@ package com.thorin.eduaps.ui.detail
 
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
+import android.content.Context
+import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +17,7 @@ import com.danjdt.pdfviewer.PdfViewer
 import com.danjdt.pdfviewer.interfaces.OnErrorListener
 import com.danjdt.pdfviewer.interfaces.OnPageChangedListener
 import com.danjdt.pdfviewer.utils.PdfPageQuality
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -33,7 +38,7 @@ class DetailPelajaranPdf : AppCompatActivity(), OnPageChangedListener, OnErrorLi
     private var _binding: ActivityPdfviewerBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var pdfRecylerview : PdfRecyclerViewAdapter
+    private lateinit var pdfRecylerview: PdfRecyclerViewAdapter
 
     private lateinit var mAuth: FirebaseAuth
 
@@ -50,9 +55,17 @@ class DetailPelajaranPdf : AppCompatActivity(), OnPageChangedListener, OnErrorLi
 
         supportActionBar?.hide()
 
-//        pdfRecylerview.nextPage()
+        val prefPreTest2: SharedPreferences =
+            this.getSharedPreferences("state_info_rotate_pdf", Context.MODE_PRIVATE)
+        val status = prefPreTest2.getString("status", null)
 
-        val dataPelajaran = intent.getParcelableExtra<ListPelajaranResponse>(EXTRA_PELAJARAN) as ListPelajaranResponse
+        if (!status.equals("sudah")) {
+            alertInfo()
+        }
+
+
+        val dataPelajaran =
+            intent.getParcelableExtra<ListPelajaranResponse>(EXTRA_PELAJARAN) as ListPelajaranResponse
 
         val factory = ViewModelFactory.getInstance(this)
         val viewModel = ViewModelProvider(this, factory)[ChatViewModel::class.java]
@@ -76,6 +89,7 @@ class DetailPelajaranPdf : AppCompatActivity(), OnPageChangedListener, OnErrorLi
             .build()
             .load(dataPelajaran.link_file.toString())
 
+
         with(binding.recyclerView) {
             this.layoutManager = LinearLayoutManager(context)
             this.setHasFixedSize(true)
@@ -84,114 +98,54 @@ class DetailPelajaranPdf : AppCompatActivity(), OnPageChangedListener, OnErrorLi
 
         binding.btSend.setOnClickListener {
 
-            getDataChat()
+            when {
+                binding.etMessage.text.isNullOrBlank() -> {
+                    Snackbar.make(
+                        binding.root,
+                        "Silahkan isi pesan terlebih dahulu ya...",
+                        Snackbar.LENGTH_SHORT
+                    ).show()
+                }
+                else -> {
+
+                    getDataChat()
+
+                }
+            }
+
 
         }
 
-        //-----webview------
+    }
 
-//        binding.webView.settings.javaScriptEnabled = true
-//
-//        val progressdialog = ProgressDialog(this)
-//        progressdialog.setMessage("Memuat Data...")
-//
-//        progressdialog.show()
-//
-//        binding.webView.webViewClient = object : WebViewClient() {
-//
-//            override fun onReceivedError(
-//                view: WebView,
-//                errorCode: Int,
-//                description: String,
-//                failingUrl: String
-//            ) {
-//                try {
-//                    binding.webView.stopLoading()
-//                } catch (e: Exception) {
-//                }
-//                try {
-//                    binding.webView.clearView()
-//                } catch (e: Exception) {
-//                }
-//                if (binding.webView.canGoBack()) {
-//                    binding.webView.goBack()
-//                }
-//                binding.webView.loadUrl("about:blank")
-//                val alertDialog = AlertDialog.Builder(this@DetailPelajaranPdf).create()
-//                alertDialog.setTitle("Gagal Membuka")
-//                alertDialog.setMessage(
-//                    """
-//                    Pastikan android anda terhubung ke internet lalu coba lagi !
-//                """.trimIndent()
-//                )
-//                alertDialog.setButton(
-//                    DialogInterface.BUTTON_POSITIVE,
-//                    "Ok",
-//                    DialogInterface.OnClickListener { _: DialogInterface, _: Int ->
-//                        moveBack()
-//                    })
-//                alertDialog.show()
-//                super.onReceivedError(binding.webView, errorCode, description, failingUrl)
-//            }
-//
-//            override fun onPageFinished(view: WebView?, url: String?) {
-//                super.onPageFinished(view, url)
-//                progressdialog.dismiss()
-//            }
-//
-//        }
-//
-//        val dataPelajaran = intent.getParcelableExtra<ListPelajaranResponse>(EXTRA_PELAJARAN) as ListPelajaranResponse
-//
-//            binding.webView.loadUrl(dataPelajaran.link_file.toString())
-//
-//    }
-//
-//    private fun moveBack() {
-//        Intent(this, MainActivity::class.java).also {
-//            startActivity(it)
-//            finish()
-//        }
-//    }
-//
-//
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        val inflater = menuInflater
-//        inflater.inflate(R.menu.pelajaran_pdf_menu, menu)
-//        return true
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return when (item.itemId) {
-//            R.id.comment -> {
-//                val dataPelajaran = intent.getParcelableExtra<ListPelajaranResponse>(EXTRA_PELAJARAN) as ListPelajaranResponse
-//                intent = Intent(this, ChatActivity::class.java)
-//                intent.putExtra("chat_id", dataPelajaran.id_soal.toString())
-//                startActivity(intent)
-//                finish()
-//                return true
-//            }
-//            else -> true
-//        }
-
-        //-----webview------
-
-
+    private fun alertInfo() {
+        val builder = AlertDialog.Builder(this)
+        builder.setView(LayoutInflater.from(this).inflate(R.layout.alert_rotate_phone, null))
+        builder.setPositiveButton("Oke") { dialog, _ ->
+            val prefPreTest2: SharedPreferences =
+                this.getSharedPreferences("state_info_rotate_pdf", Context.MODE_PRIVATE)
+            val edit = prefPreTest2.edit()
+            edit.putString("status", "sudah")
+            edit.apply()
+            dialog.dismiss()
+        }
+        val alert = builder.create()
+        alert.show()
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         // Checks the orientation of the screen
         if (newConfig.orientation === Configuration.ORIENTATION_LANDSCAPE) {
-            binding.rootView.layoutParams.height= ViewGroup.LayoutParams.MATCH_PARENT
-            binding.frameLayout.layoutParams.height= ViewGroup.LayoutParams.MATCH_PARENT
-            binding.frameLayout.layoutParams.width= ViewGroup.LayoutParams.MATCH_PARENT
+            binding.rootView.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
+            binding.frameLayout.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
+            binding.frameLayout.layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
 
 
         } else if (newConfig.orientation === Configuration.ORIENTATION_PORTRAIT) {
-            binding.rootView.layoutParams.height= ViewGroup.LayoutParams.WRAP_CONTENT
-            binding.frameLayout.layoutParams.height= ViewGroup.LayoutParams.WRAP_CONTENT
-            binding.frameLayout.layoutParams.width= ViewGroup.LayoutParams.WRAP_CONTENT
+            binding.rootView.layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT
+            binding.frameLayout.layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT
+            binding.frameLayout.layoutParams.width = ViewGroup.LayoutParams.WRAP_CONTENT
         }
     }
 
@@ -200,12 +154,16 @@ class DetailPelajaranPdf : AppCompatActivity(), OnPageChangedListener, OnErrorLi
         val progressdialog = ProgressDialog(this)
         progressdialog.setMessage("Mengirim Data...")
 
+        val preTestData: SharedPreferences =
+            this.getSharedPreferences("dataUser", Context.MODE_PRIVATE)
+
         progressdialog.show()
 
         mAuth = FirebaseAuth.getInstance()
         dbRef = FirebaseDatabase.getInstance().reference
 
-        val dataPelajaran = intent.getParcelableExtra<ListPelajaranResponse>(EXTRA_PELAJARAN) as ListPelajaranResponse
+        val dataPelajaran =
+            intent.getParcelableExtra<ListPelajaranResponse>(EXTRA_PELAJARAN) as ListPelajaranResponse
 
         val date = Date()
         val formatter = SimpleDateFormat("yyyyMMddHHmmssSSSSSS")
@@ -215,13 +173,13 @@ class DetailPelajaranPdf : AppCompatActivity(), OnPageChangedListener, OnErrorLi
         val userHashMap = HashMap<String, Any>()
         userHashMap["uid"] = mAuth.currentUser?.uid.toString()
         userHashMap["profile_photo"] = mAuth.currentUser?.photoUrl.toString()
-        userHashMap["username"] = mAuth.currentUser?.displayName.toString()
+        userHashMap["username"] = preTestData.getString("nama_user", mAuth.currentUser?.email).toString()
         userHashMap["isi_pesan"] = binding.etMessage.text.toString()
         dbRef.updateChildren(userHashMap)
             .addOnCompleteListener { tasks ->
                 if (tasks.isSuccessful) {
-                    progressdialog.dismiss()
                     binding.etMessage.setText("")
+                    progressdialog.dismiss()
                 } else {
                     progressdialog.dismiss()
                     Toast.makeText(this, "Fail", Toast.LENGTH_SHORT).show()
